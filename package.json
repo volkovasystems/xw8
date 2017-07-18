@@ -1,0 +1,33 @@
+{
+	"name": "xw8",
+	"version": "0.0.0",
+	"description": "Execute command and wait.",
+	"main": "xw8.js",
+	"scripts": {
+		"test": "mocha xw8-test.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/volkovasystems/xw8.git"
+	},
+	"keywords": [
+		"execute",
+		"command",
+		"wait",
+		"xw8"
+	],
+	"author": "Richeve S. Bebedor <richeve.bebedor@gmail.com>",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/volkovasystems/xw8/issues"
+	},
+	"homepage": "https://github.com/volkovasystems/xw8#readme",
+	"dependencies": {
+		"depher": "^0.36.0",
+		"detr": "^0.1.0",
+		"dly": "^0.2.0",
+		"falzy": "^0.20.0",
+		"shft": "^0.4.0",
+		"zelf": "^0.12.0"
+	}
+}
