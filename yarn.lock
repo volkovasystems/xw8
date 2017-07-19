@@ -140,6 +140,13 @@ backd@^0.4.0:
     truly "^0.19.0"
     zelf "^0.12.0"
 
+booleanize@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/booleanize/-/booleanize-0.1.0.tgz#751e64c682d288fc291b733c5c44b581aa5200fa"
+  dependencies:
+    babel-runtime "^6.23.0"
+    truly "^0.19.0"
+
 browser-fingerprint@0.0.1:
   version "0.0.1"
   resolved "https://registry.yarnpkg.com/browser-fingerprint/-/browser-fingerprint-0.0.1.tgz#8df3cdca25bf7d5b3542d61545d730053fce604a"
@@ -544,10 +551,11 @@ divoid@^0.3.0:
     mrkd "^0.8.0"
     protype "^0.22.0"
 
-dly@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/dly/-/dly-0.2.0.tgz#2e69eea28ede7bb7ef918202ddf8951ec152984b"
+dly@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/dly/-/dly-0.3.0.tgz#4250eceb797cf197e35ca834ccc896061a6577c3"
   dependencies:
+    booleanize "^0.1.0"
     depher "^0.36.0"
     detr "^0.1.0"
     letgo "^0.52.0"

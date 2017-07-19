@@ -95,10 +95,10 @@ const xw8 = function xw8( command, state, synchronous, option ){
 	} );
 
 	if( state ){
-		command = `count=${ option.count }; while $(${ command }) && [ $count -ge 0 ]; do sleep 1; count=$(( $count - 1 )); done; exit 0;`;
+		command = `count=${ option.count }; while $(${ command }) && [ $count -ge 0 ]; do sleep 1; count=$(( $count - 1 )); done; case $count in -1) echo -n false ;; *) echo -n true ;; esac;`;
 
 	}else{
-		command = `count=${ option.count }; until $(${ command }) || [ $count -le 0 ]; do sleep 1; count=$(( $count - 1 )); done; exit 0`;
+		command = `count=${ option.count }; until $(${ command }) || [ $count -le 0 ]; do sleep 1; count=$(( $count - 1 )); done; case $count in -1) echo -n false ;; *) echo -n true ;; esac;`;
 	}
 
 	if( synchronous ){
@@ -106,12 +106,12 @@ const xw8 = function xw8( command, state, synchronous, option ){
 
 	}else{
 		let catcher = dly.bind( zelf( this ) )( { "command": command } )
-			.then( function done( error ){
+			.then( function done( error, result ){
 				if( error instanceof Error ){
 					return catcher.pass( new Error( `cannot execute command and wait, ${ error.stack }` ), false );
 				}
 
-				return catcher.pass( null, true );
+				return catcher.pass( null, result );
 			} );
 
 		return catcher;
